@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 export default function Header() {
@@ -13,7 +14,16 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const navItem = (
+  useEffect(() => {
+    // Lock body scroll when mobile menu is open
+    if (open) {
+      const original = document.body.style.overflow
+      document.body.style.overflow = 'hidden'
+      return () => { document.body.style.overflow = original }
+    }
+  }, [open])
+
+  const DesktopNav = (
     <>
       <NavLink to="/" className={({ isActive }) => `nav-underline ${isActive ? 'nav-underline-active' : ''}`}>Trang chủ</NavLink>
       <NavLink to="/about" className={({ isActive }) => `nav-underline ${isActive ? 'nav-underline-active' : ''}`}>Giới thiệu</NavLink>
@@ -31,23 +41,36 @@ export default function Header() {
           <span className="text-ocean-600 font-semibold text-xl">Phú Yên Travel</span>
         </Link>
         <nav className="hidden md:flex items-center gap-2">
-          {navItem}
+          {DesktopNav}
         </nav>
         <button className="md:hidden p-2" onClick={() => setOpen(true)} aria-label="Open menu">
           <FaBars className="h-6 w-6" />
         </button>
       </div>
 
-      {open && (
-        <div className="md:hidden fixed inset-0 bg-white/95 p-6">
-          <div className="flex justify-between items-center mb-4">
-            <span className="text-ocean-600 font-semibold text-lg">Menu</span>
-            <button onClick={() => setOpen(false)} aria-label="Close menu"><FaTimes className="h-6 w-6" /></button>
+      {open && createPortal(
+        <div className="md:hidden fixed inset-0 z-[9999]">
+          <div className="absolute inset-0 bg-slate-900/60" onClick={() => setOpen(false)} />
+          <div className="fixed inset-0 bg-white flex flex-col">
+            <div className="flex items-center justify-between h-14 px-4 border-b shadow-sm">
+              <span className="text-ocean-600 font-semibold text-lg">Menu</span>
+              <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2">
+                <FaTimes className="h-6 w-6" />
+              </button>
+            </div>
+            <nav className="px-2 py-3 overflow-y-auto flex-1">
+              <div className="flex flex-col divide-y divide-slate-100" onClick={() => setOpen(false)}>
+                <NavLink to="/" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 font-semibold' : 'text-slate-700 hover:text-ocean-600'}`}>Trang chủ</NavLink>
+                <NavLink to="/about" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 font-semibold' : 'text-slate-700 hover:text-ocean-600'}`}>Giới thiệu</NavLink>
+                <NavLink to="/destinations" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 font-semibold' : 'text-slate-700 hover:text-ocean-600'}`}>Điểm đến</NavLink>
+                <NavLink to="/cuisine" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 font-semibold' : 'text-slate-700 hover:text-ocean-600'}`}>Ẩm thực</NavLink>
+                <NavLink to="/map" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 font-semibold' : 'text-slate-700 hover:text-ocean-600'}`}>Bản đồ</NavLink>
+                <NavLink to="/contact" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 font-semibold' : 'text-slate-700 hover:text-ocean-600'}`}>Liên hệ</NavLink>
+              </div>
+            </nav>
           </div>
-          <div className="flex flex-col gap-2" onClick={() => setOpen(false)}>
-            {navItem}
-          </div>
-        </div>
+        </div>,
+        document.body
       )}
     </header>
   )

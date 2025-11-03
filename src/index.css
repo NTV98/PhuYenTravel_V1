@@ -54,4 +54,15 @@ html {
   transform: perspective(1000px) rotateX(1deg) rotateY(-1deg) translateY(-2px);
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 

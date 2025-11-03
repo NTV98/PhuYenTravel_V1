@@ -53,8 +53,7 @@ export default function ContactForm() {
           name="message"
           value={form.message}
           onChange={handleChange}
-          className="mt-1 w-full rounded-lg bg-slate-50 px-4 py-3 border border-transparent focus:border-transparent focus:ring-0 focus:outline-none placeholder-slate-400"
-        ></textarea>
+          className="mt-1 w-full rounded-lg bg-slate-50 px-4 py-3 border border-transparent focus:border-transparent focus:ring-0 focus:outline-none placeholder-slate-400"        ></textarea>
       </div>
       <button className="btn-primary" type="submit">Gửi liên hệ</button>
     </form>

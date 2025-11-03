@@ -15,7 +15,7 @@ export default function HeroSection() {
       <img
         src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop"
         alt="Biển Phú Yên"
-        className="h-[70vh] w-full object-cover"
+        className="h-[45vh] sm:h-[60vh] md:h-[70vh] w-full object-cover"
         style={{ transform: `translateY(${offsetY * 0.4}px)` }}
       />
       <div className="absolute inset-0 z-10 flex items-center">

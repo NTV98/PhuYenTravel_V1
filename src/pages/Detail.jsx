@@ -53,7 +53,7 @@ export default function Detail() {
       {/* Hero 图 */}
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/20 z-0" />
-        <img src={item.image} alt={item.name} className="h-[50vh] w-full object-cover" />
+        <img src={item.image} alt={item.name} className="h-[38vh] sm:h-[48vh] md:h-[56vh] w-full object-cover" />
         <div className="absolute inset-0 z-10 flex items-end">
           <div className="container-responsive pb-8 text-white">
             <button onClick={() => navigate(backPath)} className="inline-flex items-center gap-2 text-white/90 hover:text-white">
@@ -94,7 +94,9 @@ export default function Detail() {
           {Array.isArray(item.gallery) && item.gallery.length > 0 && (
             <div className="mt-6 grid sm:grid-cols-2 gap-4">
               {item.gallery.map((src, i) => (
-                <img key={i} src={src} alt={`${item.name} ${i+1}`} className="rounded-xl shadow-soft object-cover w-full h-64" />
+                <div key={i} className="rounded-xl overflow-hidden shadow-soft aspect-[16/9] sm:aspect-[4/3]">
+                  <img src={src} alt={`${item.name} ${i+1}`} loading="lazy" className="w-full h-full object-cover" />
+                </div>
               ))}
             </div>
           )}
