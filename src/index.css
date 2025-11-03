@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply font-sans text-slate-800 bg-white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container-responsive {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-ocean-500 to-ocean-400 text-white px-5 py-3 font-medium shadow-soft hover:from-ocean-600 hover:to-ocean-500 focus:outline-none focus:ring-2 focus:ring-ocean-300 transition;
+}
+
+.section-title {
+  @apply text-2xl sm:text-3xl font-semibold text-ocean-800;
+}
+
+/* 导航链接底部下划线动效 */
+.nav-underline {
+  @apply relative inline-flex items-center px-3 py-2 text-slate-700 hover:text-ocean-600 transition;
+}
+.nav-underline:after {
+  content: "";
+  @apply absolute left-3 right-3 -bottom-0.5 h-0.5 bg-ocean-500 rounded origin-left scale-x-0 transition-transform;
+}
+.nav-underline-active {
+  @apply text-ocean-600;
+}
+.nav-underline-active:after, .nav-underline:hover:after {
+  transform: scaleX(1);
+}
+
+/* 细微倾斜效果的容器（卡片） */
+.tilt-card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px) translateZ(0);
+}
+.tilt-card:hover {
+  transform: perspective(1000px) rotateX(1deg) rotateY(-1deg) translateY(-2px);
+}
+
+
