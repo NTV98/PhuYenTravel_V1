@@ -19,8 +19,7 @@ export default function About() {
             và bản sắc văn hóa, hứa hẹn mang đến trải nghiệm khó quên cho du khách.
           </p>
           <p>
-            Con người Phú Yên hiền hòa, mến khách. Du lịch nơi đây phát triển theo hướng bền vững, giữ gìn thiên nhiên
-            và bản sắc văn hóa, hứa hẹn mang đến trải nghiệm khó quên cho du khách.
+          Du lịch Phú Yên là hành trình đưa bạn đến với vùng đất yên bình, nơi sở hữu biển xanh, cát trắng và những ghềnh đá kỳ vĩ. Không chỉ vậy, nơi đây còn níu chân du khách bởi ẩm thực hấp dẫn và con người mộc mạc, thân thiện.
           </p>
         </div>
       </div>
