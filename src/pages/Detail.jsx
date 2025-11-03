@@ -8,6 +8,7 @@ export default function Detail() {
   const navigate = useNavigate()
   const location = useLocation()
 
+  
   const { item, backPath, title } = useMemo(() => {
     const inferredType = type || location.pathname.split('/')[1]
     if (inferredType === 'destinations') {
