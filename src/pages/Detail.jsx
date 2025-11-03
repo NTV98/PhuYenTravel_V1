@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
-import { cuisines, highlights } from '../data/data'
+import { cuisines, highlights, activities, transports, hotels, tipsArticles, reviewPosts, weatherSummaries } from '../data/data'
 import { FaArrowLeft, FaStar, FaRegStar } from 'react-icons/fa'
 
 export default function Detail() {
@@ -15,6 +15,24 @@ export default function Detail() {
     }
     if (inferredType === 'cuisine') {
       return { item: cuisines.find(x => x.slug === slug), backPath: '/cuisine', title: 'Ẩm thực' }
+    }
+    if (inferredType === 'activities') {
+      return { item: activities.find(x => x.slug === slug), backPath: '/activities', title: 'Hoạt động' }
+    }
+    if (inferredType === 'transport') {
+      return { item: transports.find(x => x.slug === slug), backPath: '/transport', title: 'Phương tiện' }
+    }
+    if (inferredType === 'hotels') {
+      return { item: hotels.find(x => x.slug === slug), backPath: '/hotels', title: 'Khách sạn' }
+    }
+    if (inferredType === 'tips') {
+      return { item: tipsArticles.find(x => x.slug === slug), backPath: '/tips', title: 'Kinh nghiệm' }
+    }
+    if (inferredType === 'reviews') {
+      return { item: reviewPosts.find(x => x.slug === slug), backPath: '/reviews', title: 'Review' }
+    }
+    if (inferredType === 'weather') {
+      return { item: weatherSummaries.find(x => x.slug === slug), backPath: '/weather', title: 'Thời tiết' }
     }
     return { item: null, backPath: '/', title: '' }
   }, [type, slug, location.pathname])

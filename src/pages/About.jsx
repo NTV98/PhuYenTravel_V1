@@ -18,8 +18,118 @@ export default function About() {
             Con người Phú Yên hiền hòa, mến khách. Du lịch nơi đây phát triển theo hướng bền vững, giữ gìn thiên nhiên
             và bản sắc văn hóa, hứa hẹn mang đến trải nghiệm khó quên cho du khách.
           </p>
+          <p>
+            Con người Phú Yên hiền hòa, mến khách. Du lịch nơi đây phát triển theo hướng bền vững, giữ gìn thiên nhiên
+            và bản sắc văn hóa, hứa hẹn mang đến trải nghiệm khó quên cho du khách.
+          </p>
         </div>
       </div>
+
+      <section className="mt-12">
+        <h2 className="text-xl font-semibold text-slate-800">Điểm nhấn thiên nhiên</h2>
+        <p className="mt-3 text-slate-700 max-w-3xl">
+          Địa hình đa dạng: ghềnh đá bazan độc nhất như Ghềnh Đá Đĩa, các bãi biển nước trong như Bãi Môn, Bãi Xép,
+          cùng vịnh, đầm, đảo nhỏ hoang sơ như Vịnh Xuân Đài, Đầm Ô Loan.
+        </p>
+        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="card">Ghềnh Đá Đĩa – kỳ quan đá bazan xếp lớp</div>
+          <div className="card">Mũi Điện – nơi đón bình minh sớm</div>
+          <div className="card">Vịnh Xuân Đài – làng chài & hải sản tươi</div>
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="text-xl font-semibold text-slate-800">Thời điểm lý tưởng để ghé thăm</h2>
+        <div className="mt-3 grid md:grid-cols-2 gap-6 text-slate-700">
+          <div className="p-5 rounded-xl border bg-white shadow-soft">
+            <h3 className="font-semibold text-emerald-900">Mùa khô (1–8)</h3>
+            <p className="mt-2">Nắng đẹp, biển êm – thích hợp tắm biển, lặn san hô, trekking.</p>
+            <ul className="mt-2 list-disc list-inside text-sm">
+              <li>Chống nắng, bổ sung nước</li>
+              <li>Dậy sớm để chụp ảnh bình minh</li>
+            </ul>
+          </div>
+          <div className="p-5 rounded-xl border bg-white shadow-soft">
+            <h3 className="font-semibold text-slate-800">Mùa mưa (9–12)</h3>
+            <p className="mt-2">Có mưa rải rác, thỉnh thoảng gió mạnh – ưu tiên tham quan văn hóa, ẩm thực.</p>
+            <ul className="mt-2 list-disc list-inside text-sm">
+              <li>Theo dõi dự báo thời tiết</li>
+              <li>Tránh đi biển khi có cảnh báo áp thấp/gió mạnh</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="text-xl font-semibold text-slate-800">Văn hóa & Ẩm thực</h2>
+        <div className="mt-3 grid md:grid-cols-2 gap-6">
+          <div className="p-5 rounded-xl border bg-white shadow-soft">
+            <h3 className="font-semibold text-slate-800">Văn hóa</h3>
+            <p className="mt-2 text-slate-700">Di tích Chăm Pa như Tháp Nhạn, lễ hội địa phương mộc mạc, làng nghề truyền thống.</p>
+            <ul className="mt-2 list-disc list-inside text-sm text-slate-700">
+              <li>Lễ hội đua thuyền, cầu ngư</li>
+              <li>Làng nghề làm nước mắm, đan lưới</li>
+            </ul>
+          </div>
+          <div className="p-5 rounded-xl border bg-white shadow-soft">
+            <h3 className="font-semibold text-slate-800">Ẩm thực</h3>
+            <p className="mt-2 text-slate-700">Đậm đà vị biển với cá ngừ đại dương, sò huyết Ô Loan, bánh canh hẹ.</p>
+            <ul className="mt-2 list-disc list-inside text-sm text-slate-700">
+              <li>Cá ngừ đại dương: sashimi, mắt cá ngừ</li>
+              <li>Bánh canh hẹ, bánh hỏi lòng heo</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="text-xl font-semibold text-slate-800">Di chuyển & Lưu trú</h2>
+        <div className="mt-3 grid md:grid-cols-3 gap-6 text-slate-700">
+          <div className="p-5 rounded-xl border bg-white shadow-soft">
+            <h3 className="font-semibold">Đến Phú Yên</h3>
+            <p className="mt-2 text-sm">Máy bay đến TBB; tàu hỏa ga Tuy Hòa; xe khách từ các tỉnh lân cận.</p>
+          </div>
+          <div className="p-5 rounded-xl border bg-white shadow-soft">
+            <h3 className="font-semibold">Đi lại</h3>
+            <p className="mt-2 text-sm">Thuê xe máy/ô tô, taxi/xe công nghệ; đường ven biển đẹp, nhiều điểm dừng.</p>
+          </div>
+          <div className="p-5 rounded-xl border bg-white shadow-soft">
+            <h3 className="font-semibold">Lưu trú</h3>
+            <p className="mt-2 text-sm">Resort ven biển, khách sạn trung tâm, homestay view đẹp phù hợp nhiều ngân sách.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="text-xl font-semibold text-slate-800">Gợi ý lịch trình</h2>
+        <div className="mt-3 grid md:grid-cols-3 gap-6 text-slate-700">
+          <div className="card">2 ngày 1 đêm: Tuy Hòa – Tháp Nhạn – Bãi Xép – Ghềnh Đá Đĩa</div>
+          <div className="card">3 ngày 2 đêm: Vịnh Xuân Đài – Đầm Ô Loan – Mũi Điện – Bãi Môn</div>
+          <div className="card">Gia đình: thêm làng chài, trải nghiệm ghe thúng, chợ hải sản</div>
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="text-xl font-semibold text-slate-800">Câu hỏi thường gặp</h2>
+        <div className="mt-3 grid md:grid-cols-2 gap-6">
+          <div className="p-5 rounded-xl border bg-white shadow-soft">
+            <h3 className="font-semibold text-slate-800">Đi mùa nào đẹp nhất?</h3>
+            <p className="mt-2 text-slate-700">Mùa khô (1–8) nắng đẹp, biển êm; dậy sớm để săn bình minh ở Mũi Điện.</p>
+          </div>
+          <div className="p-5 rounded-xl border bg-white shadow-soft">
+            <h3 className="font-semibold text-slate-800">Ăn gì nhất định phải thử?</h3>
+            <p className="mt-2 text-slate-700">Cá ngừ đại dương, sò huyết Ô Loan, bánh canh hẹ và các món hải sản tươi.</p>
+          </div>
+          <div className="p-5 rounded-xl border bg-white shadow-soft">
+            <h3 className="font-semibold text-slate-800">Có phù hợp đi cùng gia đình?</h3>
+            <p className="mt-2 text-slate-700">Rất phù hợp: bãi biển thoải, nhiều hoạt động nhẹ nhàng và trải nghiệm văn hóa.</p>
+          </div>
+          <div className="p-5 rounded-xl border bg-white shadow-soft">
+            <h3 className="font-semibold text-slate-800">Di chuyển giữa các điểm có xa không?</h3>
+            <p className="mt-2 text-slate-700">Các điểm chính cách nhau 10–40 km; thuê xe máy/ô tô là lựa chọn linh hoạt.</p>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

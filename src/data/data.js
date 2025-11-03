@@ -113,7 +113,8 @@ export const highlights = [
     info: [
       { label: 'Hoạt động', value: 'Tắm biển, chụp ảnh' }
     ]
-  }
+  },
+  
 ]
 
 export const cuisines = [
@@ -205,6 +206,221 @@ export const cuisines = [
     info: [
       { label: 'Phù hợp', value: 'Làm quà biếu' }
     ]
+  }
+]
+
+export const activities = [
+  {
+    name: 'Lặn ngắm san hô Hòn Yến',
+    slug: 'lan-ngam-san-ho-hon-yen',
+    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop',
+    description: 'Khám phá hệ sinh thái san hô đa dạng ở Hòn Yến.',
+    longDescription: 'Hòn Yến là khu bảo tồn với thảm san hô phong phú. Vào mùa nước êm, tầm nhìn tốt, trải nghiệm snorkeling rất ấn tượng. Nên đi cùng HDV địa phương để chọn điểm an toàn và bảo vệ san hô.',
+    rating: 4.7,
+    votes: 612,
+    review: 'Nước trong, san hô nhiều màu, cá nhỏ bơi từng đàn. Nên đi sớm là đẹp nhất.',
+    tips: [
+      'Không giẫm lên san hô',
+      'Dùng kem chống nắng thân thiện biển',
+      'Mang áo phao nếu bơi chưa tốt'
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?q=80&w=1600&auto=format&fit=crop'
+    ],
+    info: [
+      { label: 'Phù hợp', value: 'Nhóm bạn, cặp đôi' },
+      { label: 'Thời điểm', value: 'Mùa khô, biển êm' }
+    ]
+  },
+  {
+    name: 'Trekking Ghềnh Đá Đĩa – Đầm Ô Loan',
+    slug: 'trekking-ghenh-da-dia-dam-o-loan',
+    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop',
+    description: 'Cung đi bộ nhẹ, ngắm biển và cảnh làng chài.',
+    longDescription: 'Cung đường ven biển từ Ghềnh Đá Đĩa đến Đầm Ô Loan mang lại góc nhìn toàn vịnh. Độ khó nhẹ, phù hợp nhiều lứa tuổi, dừng chân thưởng thức hải sản tươi.',
+    rating: 4.5,
+    votes: 384,
+    tips: [
+      'Đi giày thể thao đế bám',
+      'Mang đủ nước uống',
+      'Tránh nắng gắt buổi trưa'
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1493550495481-0058cd1f7b3c?q=80&w=1600&auto=format&fit=crop'
+    ],
+    info: [
+      { label: 'Độ khó', value: 'Dễ – trung bình' }
+    ]
+  },
+  {
+    name: 'Chèo SUP vịnh Vũng Rô – Bãi Môn',
+    slug: 'cheo-sup-vinh-vung-ro-bai-mon',
+    image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1600&auto=format&fit=crop',
+    description: 'Trải nghiệm thể thao nước nhẹ nhàng giữa vịnh xanh.',
+    longDescription: 'Nước êm, cảnh quan bao quanh bởi núi, rất hợp chèo SUP sáng sớm hoặc chiều muộn. Có thể thuê SUP tại các điểm dịch vụ địa phương.',
+    rating: 4.6,
+    votes: 421,
+    tips: [
+      'Mặc áo phao, tuân thủ hướng dẫn',
+      'Không chèo xa bờ khi gió lớn'
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1600&auto=format&fit=crop'
+    ],
+    info: [
+      { label: 'Thời lượng', value: '1–2 giờ' }
+    ]
+  }
+]
+
+export const transports = [
+  {
+    name: 'Máy bay đến Tuy Hòa (TBB)',
+    slug: 'may-bay-den-tuy-hoa',
+    image: 'https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?q=80&w=1600&auto=format&fit=crop',
+    description: 'Bay thẳng từ Hà Nội/TP.HCM đến sân bay Tuy Hòa.',
+    longDescription: 'Các hãng Vietjet, Vietnam Airlines, Bamboo có chuyến bay đến TBB. Từ sân bay về trung tâm ~10km, đi taxi/xe công nghệ 15–25 phút.',
+    info: [
+      { label: 'Thời gian bay', value: '1h15–1h40 tùy chặng' },
+      { label: 'Di chuyển về trung tâm', value: 'Taxi/xe công nghệ' }
+    ]
+  },
+  {
+    name: 'Tàu hỏa ga Tuy Hòa',
+    slug: 'tau-hoa-ga-tuy-hoa',
+    image: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1600&auto=format&fit=crop',
+    description: 'Tuyến Bắc – Nam dừng tại ga Tuy Hòa, thuận tiện, ngắm cảnh.',
+    longDescription: 'Chọn ghế/giường nằm tùy ngân sách. Thời gian di chuyển dài hơn máy bay nhưng ít phụ thuộc thời tiết, trải nghiệm êm.',
+    info: [
+      { label: 'Ga', value: 'Tuy Hòa (PY)' },
+      { label: 'Ưu điểm', value: 'Ngắm cảnh, ổn định' }
+    ]
+  },
+  {
+    name: 'Thuê xe máy/ô tô tự lái',
+    slug: 'thue-xe-tu-lai',
+    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop',
+    description: 'Chủ động khám phá – linh hoạt dừng chụp ảnh.',
+    longDescription: 'Nhiều cửa hàng cho thuê xe máy/ô tô tại trung tâm Tuy Hòa. Kiểm tra giấy tờ, tình trạng xe, mũ bảo hiểm đạt chuẩn.',
+    tips: [
+      'Chụp ảnh hiện trạng xe trước khi nhận',
+      'Tuân thủ tốc độ, mang đầy đủ giấy tờ'
+    ],
+    info: [
+      { label: 'Giá tham khảo', value: 'Xe máy 120–180k/ngày; ô tô 700k+ /ngày' }
+    ]
+  }
+]
+
+export const hotels = [
+  {
+    name: 'Resort ven biển Tuy Hòa',
+    slug: 'resort-ven-bien-tuy-hoa',
+    image: 'https://images.unsplash.com/photo-1496412705862-e0088f16f791?q=80&w=1600&auto=format&fit=crop',
+    description: 'Khu nghỉ dưỡng cao cấp, phù hợp cặp đôi & gia đình.',
+    longDescription: 'Resort có bãi tắm riêng, hồ bơi, spa. Vị trí sát biển, thuận tiện ngắm bình minh và dạo bộ.',
+    rating: 4.6,
+    votes: 289,
+    gallery: [
+      'https://images.unsplash.com/photo-1501117716987-c8e2a1a7a3f4?q=80&w=1600&auto=format&fit=crop'
+    ],
+    info: [
+      { label: 'Phù hợp', value: 'Gia đình, cặp đôi' },
+      { label: 'Tiện nghi', value: 'Bãi biển riêng, hồ bơi, spa' }
+    ]
+  },
+  {
+    name: 'Khách sạn trung tâm thành phố',
+    slug: 'khach-san-trung-tam',
+    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600&auto=format&fit=crop',
+    description: 'Đi lại thuận tiện, gần chợ đêm và ẩm thực.',
+    longDescription: 'Nhiều hạng phòng, giá hợp lý, tiện di chuyển đến các điểm tham quan trong ngày.',
+    rating: 4.4,
+    votes: 413,
+    info: [
+      { label: 'Ưu điểm', value: 'Vị trí, giá hợp lý' }
+    ]
+  },
+  {
+    name: 'Homestay view đồi cỏ/bờ biển',
+    slug: 'homestay-view-dep',
+    image: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=1600&auto=format&fit=crop',
+    description: 'Không gian ấm cúng, nhiều góc chụp ảnh đẹp.',
+    longDescription: 'Phòng thiết kế tối giản, gần thiên nhiên. Phù hợp nhóm bạn trẻ, thích khám phá và chụp ảnh.',
+    rating: 4.5,
+    votes: 198
+  }
+]
+
+export const tipsArticles = [
+  {
+    name: 'Lịch trình 3 ngày 2 đêm Phú Yên',
+    slug: 'lich-trinh-3n2d-phu-yen',
+    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop',
+    description: 'Gợi ý lịch trình tối ưu cho lần đầu đến Phú Yên.',
+    longDescription: 'Ngày 1: Tuy Hòa – Tháp Nhạn – Bãi Xép. Ngày 2: Ghềnh Đá Đĩa – Đầm Ô Loan – Vịnh Xuân Đài. Ngày 3: Mũi Điện – Bãi Môn – chợ hải sản.',
+    tips: [
+      'Dậy sớm để bắt kịp bình minh ở Mũi Điện',
+      'Đặt hải sản ở làng chài để tươi và rẻ'
+    ]
+  },
+  {
+    name: 'Chuẩn bị đồ và ngân sách',
+    slug: 'chuan-bi-do-va-ngan-sach',
+    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600&auto=format&fit=crop',
+    description: 'Checklist đồ dùng, tips tiết kiệm chi phí.',
+    longDescription: 'Kem chống nắng, mũ rộng vành, giày bám, túi chống nước; đặt vé sớm, săn combo bay + phòng để tối ưu chi phí.'
+  },
+  {
+    name: 'Lưu ý thời tiết và an toàn',
+    slug: 'luu-y-thoi-tiet-va-an-toan',
+    image: 'https://images.unsplash.com/photo-1501973801540-537f08ccae7b?q=80&w=1600&auto=format&fit=crop',
+    description: 'Chọn mùa đẹp, tránh gió bão và lưu ý khi đi biển.',
+    longDescription: 'Mùa khô biển êm, phù hợp hoạt động nước. Khi có cảnh báo áp thấp/gió mạnh, hạn chế ra khơi và tuân thủ hướng dẫn địa phương.'
+  }
+]
+
+export const reviewPosts = [
+  {
+    name: 'Review Mũi Điện – Bãi Môn bình minh đầu tiên',
+    slug: 'review-mui-dien-bai-mon',
+    image: 'https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=1600&auto=format&fit=crop',
+    description: 'Chi phí, đường đi, mẹo săn bình minh đẹp.',
+    longDescription: 'Xuất phát 4:30, gửi xe dưới chân núi, leo ~20–30 phút. Mang đèn pin, mặc áo gió. Bình minh lên cực đẹp trên nền biển xanh.',
+    rating: 4.8,
+    votes: 156
+  },
+  {
+    name: 'Ăn gì ở Tuy Hòa một ngày?',
+    slug: 'review-an-gi-o-tuy-hoa',
+    image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=1600&auto=format&fit=crop',
+    description: 'Food tour sáng–trưa–tối với đặc sản địa phương.',
+    longDescription: 'Sáng bánh canh hẹ, trưa cá ngừ đại dương, chiều sò huyết Ô Loan, tối bánh hỏi lòng heo. Kèm quán gợi ý và khoảng giá.'
+  },
+  {
+    name: 'Một ngày ở Vịnh Xuân Đài',
+    slug: 'review-vinh-xuan-dai',
+    image: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1600&auto=format&fit=crop',
+    description: 'Thuê thuyền, check-in làng chài, ăn hải sản.',
+    longDescription: 'Đi ghe thúng, ghé bè hải sản, check-in bãi hoang vắng. Chi phí hợp lý, không khí yên bình.'
+  }
+]
+
+export const weatherSummaries = [
+  {
+    name: 'Mùa khô (tháng 1–8)',
+    slug: 'mua-kho',
+    image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1600&auto=format&fit=crop',
+    description: 'Thời tiết nắng đẹp, biển êm – lý tưởng cho hoạt động ngoài trời.',
+    longDescription: 'Ít mưa, nắng nhiều, độ ẩm vừa phải. Phù hợp tắm biển, lặn ngắm san hô, trekking. Lưu ý chống nắng và bổ sung nước.'
+  },
+  {
+    name: 'Mùa mưa (tháng 9–12)',
+    slug: 'mua-mua',
+    image: 'https://images.unsplash.com/photo-1493815793585-d94ccbc86df8?q=80&w=1600&auto=format&fit=crop',
+    description: 'Có mưa rải rác, đôi khi gió mạnh/áp thấp – hạn chế hoạt động biển.',
+    longDescription: 'Theo dõi dự báo, cân nhắc kế hoạch thay thế như tham quan di tích, ẩm thực. Tránh đi biển khi có cảnh báo thời tiết xấu.'
   }
 ]
 

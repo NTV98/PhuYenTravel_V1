@@ -3,7 +3,7 @@ import { FaFacebook, FaYoutube, FaInstagram } from 'react-icons/fa'
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-50 border-t">
+    <footer className="bg-slate-50 border-t mt-[100px]">
       <div className="container-responsive py-10 grid md:grid-cols-3 gap-8">
         <div>
           <h4 className="text-lg font-semibold text-ocean-700">Phú Yên Travel</h4>
@@ -21,6 +21,12 @@ export default function Footer() {
             <li><Link to="/about">Giới thiệu</Link></li>
             <li><Link to="/destinations">Điểm đến</Link></li>
             <li><Link to="/cuisine">Ẩm thực</Link></li>
+            <li><Link to="/activities">Hoạt động</Link></li>
+            <li><Link to="/transport">Phương tiện</Link></li>
+            <li><Link to="/hotels">Khách sạn</Link></li>
+            <li><Link to="/tips">Kinh nghiệm</Link></li>
+            <li><Link to="/reviews">Review</Link></li>
+            <li><Link to="/weather">Thời tiết</Link></li>
             <li><Link to="/map">Bản đồ</Link></li>
             <li><Link to="/contact">Liên hệ</Link></li>
           </ul>
