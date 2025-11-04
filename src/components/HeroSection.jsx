@@ -17,7 +17,7 @@ export default function HeroSection() {
     <section className="relative">
       <div className="absolute inset-0 bg-gradient-to-b from-ocean-900/60 to-ocean-800/40 z-0" />
       <img
-        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop"
+        src={`/image/banner041125.png`}
         alt="Biển Phú Yên"
         className="h-[60vh] sm:h-[60vh] md:h-[70vh] w-full object-cover"
         style={{ transform: `translateY(${offsetY * 0.4}px)` }}

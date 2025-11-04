@@ -1,21 +1,56 @@
-import { useMemo } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
-import { cuisines, highlights, activities, transports, hotels, tipsArticles, reviewPosts, weatherSummaries } from '../data/data'
+import { highlights, activities, transports, hotels, tipsArticles, reviewPosts, weatherSummaries, cuisines } from '../data/data'
+import { getCuisineBySlug } from '../services/cuisines'
 import { FaArrowLeft, FaStar, FaRegStar, FaHeart, FaMapMarkerAlt, FaEllipsisV } from 'react-icons/fa'
 
 export default function Detail() {
   const { type, slug } = useParams()
   const navigate = useNavigate()
   const location = useLocation()
+  const [cuisineItem, setCuisineItem] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
-  
+  const inferredType = type || location.pathname.split('/')[1]
+
+  const localCuisine = useMemo(() => {
+    return cuisines.find(x => x.slug === slug)
+  }, [slug])
+
+  // Fetch cuisine from API if type is cuisine, fallback to local data
+  useEffect(() => {
+    if (inferredType === 'cuisine' && slug) {
+      const fetchCuisine = async () => {
+        try {
+          setLoading(true)
+          setError(null)
+          // Show local data immediately if available
+          if (localCuisine) {
+            setCuisineItem(localCuisine)
+          }
+          const data = await getCuisineBySlug(slug)
+          setCuisineItem(data)
+        } catch (err) {
+          console.error('Error fetching cuisine:', err)
+          // Only show error if không có data local
+          if (!localCuisine) {
+            setError('Không thể tải thông tin món ăn. Vui lòng thử lại sau.')
+          }
+        } finally {
+          setLoading(false)
+        }
+      }
+      fetchCuisine()
+    }
+  }, [inferredType, slug, localCuisine])
+
   const { item, backPath, title } = useMemo(() => {
-    const inferredType = type || location.pathname.split('/')[1]
     if (inferredType === 'destinations') {
       return { item: highlights.find(x => x.slug === slug), backPath: '/destinations', title: 'Điểm đến' }
     }
     if (inferredType === 'cuisine') {
-      return { item: cuisines.find(x => x.slug === slug), backPath: '/cuisine', title: 'Ẩm thực' }
+      return { item: cuisineItem, backPath: '/cuisine', title: 'Ẩm thực' }
     }
     if (inferredType === 'activities') {
       return { item: activities.find(x => x.slug === slug), backPath: '/activities', title: 'Hoạt động' }
@@ -36,7 +71,43 @@ export default function Detail() {
       return { item: weatherSummaries.find(x => x.slug === slug), backPath: '/weather', title: 'Thời tiết' }
     }
     return { item: null, backPath: '/', title: '' }
-  }, [type, slug, location.pathname])
+  }, [type, slug, location.pathname, cuisineItem, inferredType])
+
+  // Show loading state for cuisine
+  if (inferredType === 'cuisine' && loading) {
+    return (
+      <div className="min-h-screen bg-white dark:bg-slate-900">
+        <div className="container-responsive py-16">
+          <div className="animate-pulse space-y-6">
+            <div className="h-64 bg-slate-300 dark:bg-slate-700 rounded-xl" />
+            <div className="space-y-3">
+              <div className="h-8 bg-slate-300 dark:bg-slate-700 rounded w-3/4" />
+              <div className="h-4 bg-slate-300 dark:bg-slate-700 rounded w-full" />
+              <div className="h-4 bg-slate-300 dark:bg-slate-700 rounded w-5/6" />
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Show error state for cuisine
+  if (inferredType === 'cuisine' && error) {
+    return (
+      <div className="container-responsive py-16">
+        <button onClick={() => navigate(-1)} className="text-ocean-600 dark:text-ocean-400 hover:underline">Quay lại</button>
+        <div className="mt-6 p-6 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
+          <p className="text-red-600 dark:text-red-400">{error}</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+          >
+            Thử lại
+          </button>
+        </div>
+      </div>
+    )
+  }
 
   if (!item) {
     return (

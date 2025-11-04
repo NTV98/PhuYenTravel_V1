@@ -2,6 +2,7 @@ export const highlights = [
   {
     name: 'Ghềnh Đá Đĩa',
     slug: 'ghenh-da-dia',
+    imageName: 'ghenhdadia.png',
     image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop',
     description: 'Kỳ quan thiên nhiên độc đáo với các cột đá xếp chồng như đĩa – biểu tượng của Phú Yên.',
     longDescription: 'Ghềnh Đá Đĩa là một thắng cảnh quốc gia với cấu trúc đá bazan hình lăng trụ xếp lớp khít nhau như chồng đĩa. Thời điểm đẹp nhất để tham quan là sáng sớm hoặc chiều muộn, khi nắng xiên tạo nên tương phản mạnh và mặt biển chuyển sắc xanh biếc.',
@@ -26,6 +27,7 @@ export const highlights = [
   {
     name: 'Mũi Điện - Bãi Môn',
     slug: 'mui-dien-bai-mon',
+    imageName: 'muidien041125.png',
     image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop',
     description: 'Nơi đón bình minh sớm nhất trên đất liền Việt Nam với bãi cát mịn và nước trong xanh.',
     longDescription: 'Mũi Điện (Đại Lãnh) nổi tiếng là điểm đón bình minh đầu tiên trên đất liền Việt Nam. Bãi Môn phía dưới chân hải đăng có dải cát vàng và làn nước trong vắt, rất phù hợp cho hoạt động tắm biển, cắm trại.',
@@ -38,8 +40,8 @@ export const highlights = [
       'Giữ vệ sinh, không xả rác tại khu cắm trại'
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1493550495481-0058cd1f7b3c?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1519680772-8b1b0b84f67b?q=80&w=1600&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop'
     ],
     info: [
       { label: 'Trải nghiệm', value: 'Leo hải đăng, tắm biển' },
@@ -49,6 +51,7 @@ export const highlights = [
   {
     name: 'Vịnh Xuân Đài',
     slug: 'vinh-xuan-dai',
+    imageName: 'vinhxuandai041125.png',
     image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1600&auto=format&fit=crop',
     description: 'Vẻ đẹp hoang sơ với nhiều eo biển, đảo nhỏ và làng chài yên bình.',
     longDescription: 'Vịnh Xuân Đài nổi tiếng với mặt biển phẳng lặng, nhiều vũng, vịnh và các làng chài ven bờ. Trải nghiệm ghe thúng, thưởng thức hải sản địa phương là những hoạt động không thể bỏ lỡ.',
@@ -61,8 +64,8 @@ export const highlights = [
       'Mang thuốc say sóng nếu dễ say'
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop'
     ],
     info: [
       { label: 'Hoạt động', value: 'Đi thuyền, ăn hải sản' },
@@ -72,6 +75,7 @@ export const highlights = [
   {
     name: 'Tháp Nhạn',
     slug: 'thap-nhan',
+    imageName: 'thapnhan041125.png',
     image: 'https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?q=80&w=1600&auto=format&fit=crop',
     description: 'Di tích Chăm cổ kính trên núi Nhạn – biểu tượng văn hóa Tuy Hòa.',
     longDescription: 'Tháp Nhạn là di tích kiến trúc Chăm Pa có giá trị lịch sử và nghệ thuật. Ban đêm, tháp được thắp sáng tạo nên khung cảnh rất ấn tượng nhìn từ thành phố Tuy Hòa.',
@@ -84,8 +88,8 @@ export const highlights = [
       'Không leo trèo lên các cấu trúc cổ'
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1600&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop'
     ],
     info: [
       { label: 'Loại hình', value: 'Di tích Chăm Pa' },
@@ -95,6 +99,7 @@ export const highlights = [
   {
     name: 'Bãi Xép',
     slug: 'bai-xep',
+    imageName: 'baixep041125.png',
     image: 'https://images.unsplash.com/photo-1510414696678-2415ad8474aa?q=80&w=1600&auto=format&fit=crop',
     description: 'Nơi nổi tiếng trong bộ phim “Tôi thấy hoa vàng trên cỏ xanh”.',
     longDescription: 'Bãi Xép hấp dẫn bởi triền cỏ xanh mướt và bãi đá đen bên cạnh làn nước màu ngọc bích. Đây là địa điểm chụp ảnh check-in rất được ưa thích.',
@@ -121,6 +126,7 @@ export const cuisines = [
   {
     name: 'Bánh canh hẹ',
     slug: 'banh-canh-he',
+    imageName: 'banhcanhhe041125.png',
     image: 'https://images.pexels.com/photos/5394513/pexels-photo-5394513.jpeg?auto=compress&cs=tinysrgb&w=1600',
     description: 'Đặc sản nổi tiếng với nước dùng ngọt thanh, nhiều hẹ xanh hấp dẫn.',
     longDescription: 'Tô bánh canh nóng hổi với sợi bánh mềm, nước dùng thanh ngọt và lớp hẹ xanh dậy mùi. Thường ăn kèm chả cá và ớt tươi.',
@@ -144,6 +150,7 @@ export const cuisines = [
   {
     name: 'Cá ngừ đại dương',
     slug: 'ca-ngu-dai-duong',
+    imageName: 'matcangu041125.png',
     image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1600&auto=format&fit=crop',
     description: 'Đặc sản trứ danh Phú Yên, có thể chế biến đa dạng: mắt cá ngừ, sashimi...',
     longDescription: 'Cá ngừ đại dương là niềm tự hào ẩm thực của Phú Yên, với nhiều món đặc sắc như mắt cá ngừ tiềm thuốc bắc, sashimi tươi.',
@@ -166,6 +173,7 @@ export const cuisines = [
   {
     name: 'Sò huyết đầm Ô Loan',
     slug: 'so-huyet-dam-o-loan',
+    imageName: 'sohuyetdamoloan041125.png',
     image: 'https://images.pexels.com/photos/5409020/pexels-photo-5409020.jpeg?auto=compress&cs=tinysrgb&w=1600',
     description: 'Sò huyết tươi ngon, ngọt thịt – nổi tiếng khắp cả nước.',
     longDescription: 'Đầm Ô Loan nổi tiếng với nguồn sò huyết tươi, thịt dày và giàu dinh dưỡng. Thường chế biến nướng mỡ hành, xào me.',
@@ -188,6 +196,7 @@ export const cuisines = [
   {
     name: 'Bò một nắng',
     slug: 'bo-mot-nang',
+    imageName: 'bomotnang041125.png',
     image: 'https://images.pexels.com/photos/616354/pexels-photo-616354.jpeg?auto=compress&cs=tinysrgb&w=1600',
     description: 'Món ăn đặc sản với thịt bò phơi nắng, ăn kèm muối kiến vàng.',
     longDescription: 'Thịt bò được tẩm ướp và phơi nắng trong thời gian ngắn, sau đó nướng/chế biến để giữ độ ngọt. Ăn kèm muối kiến vàng là đặc trưng thú vị.',
@@ -213,6 +222,7 @@ export const activities = [
   {
     name: 'Lặn ngắm san hô Hòn Yến',
     slug: 'lan-ngam-san-ho-hon-yen',
+    imageName: 'lanngamsanhohonyen041125.png',
     image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop',
     description: 'Khám phá hệ sinh thái san hô đa dạng ở Hòn Yến.',
     longDescription: 'Hòn Yến là khu bảo tồn với thảm san hô phong phú. Vào mùa nước êm, tầm nhìn tốt, trải nghiệm snorkeling rất ấn tượng. Nên đi cùng HDV địa phương để chọn điểm an toàn và bảo vệ san hô.',
@@ -236,6 +246,7 @@ export const activities = [
   {
     name: 'Trekking Ghềnh Đá Đĩa – Đầm Ô Loan',
     slug: 'trekking-ghenh-da-dia-dam-o-loan',
+    imageName: 'treckkingghenhdadia041125.png',
     image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop',
     description: 'Cung đi bộ nhẹ, ngắm biển và cảnh làng chài.',
     longDescription: 'Cung đường ven biển từ Ghềnh Đá Đĩa đến Đầm Ô Loan mang lại góc nhìn toàn vịnh. Độ khó nhẹ, phù hợp nhiều lứa tuổi, dừng chân thưởng thức hải sản tươi.',
@@ -259,6 +270,7 @@ export const activities = [
   {
     name: 'Chèo SUP vịnh Vũng Rô – Bãi Môn',
     slug: 'cheo-sup-vinh-vung-ro-bai-mon',
+    imageName: 'cheosupvinhvungro041125.png',
     image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1600&auto=format&fit=crop',
     description: 'Trải nghiệm thể thao nước nhẹ nhàng giữa vịnh xanh.',
     longDescription: 'Nước êm, cảnh quan bao quanh bởi núi, rất hợp chèo SUP sáng sớm hoặc chiều muộn. Có thể thuê SUP tại các điểm dịch vụ địa phương.',
@@ -285,6 +297,7 @@ export const transports = [
   {
     name: 'Máy bay đến Tuy Hòa (TBB)',
     slug: 'may-bay-den-tuy-hoa',
+    imageName: 'dichuyenbangmaybay.png',
     image: 'https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?q=80&w=1600&auto=format&fit=crop',
     description: 'Bay thẳng từ Hà Nội/TP.HCM đến sân bay Tuy Hòa.',
     longDescription: 'Các hãng Vietjet, Vietnam Airlines, Bamboo có chuyến bay đến TBB. Từ sân bay về trung tâm ~10km, đi taxi/xe công nghệ 15–25 phút. Nên đặt vé sớm để có giá tốt, đặc biệt vào mùa cao điểm.',
