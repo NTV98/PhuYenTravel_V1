@@ -32,7 +32,7 @@ export default function CuisineCard({ item, type }) {
       <Link to={`/${basePath}/${item.slug}`} className="block">
         <div className="relative aspect-[4/3] overflow-hidden">
           <img 
-            src={item.imageName ? `/image/${item.imageName}` : item.image} 
+            src={item.imageName ? `${import.meta.env.BASE_URL}image/${item.imageName}` : item.image} 
             alt={item.name} 
             loading="lazy" 
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
