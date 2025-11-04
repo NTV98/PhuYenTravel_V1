@@ -49,7 +49,9 @@ export default function HeroSection() {
             transition={{ duration: 0.3, delay: 0.1 }}
             className="mt-6"
           >
-            <a href="#highlights" className="btn-primary">Khám phá ngay</a>
+            <a href="#highlights" className="inline-flex items-center gap-2 rounded-xl bg-accent-yellow text-black px-6 py-3.5 font-semibold shadow-lg hover:bg-accent-yellow-dark transition-colors">
+              Khám phá ngay
+            </a>
           </motion.div>
         </div>
       </div>

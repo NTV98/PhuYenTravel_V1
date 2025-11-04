@@ -21,6 +21,11 @@ export default {
           900: '#00263b',
         },
         sand: '#f6d365',
+        accent: {
+          yellow: '#FFD700',
+          'yellow-dark': '#FFC107',
+          'yellow-light': '#FFE082',
+        },
       },
       fontFamily: {
         sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],

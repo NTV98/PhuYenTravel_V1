@@ -6,15 +6,20 @@ export default function ThemeToggle() {
 
   return (
     <button
-      onClick={toggleTheme}
-      className="relative w-16 h-8 rounded-full overflow-hidden cursor-pointer transition-all duration-300 outline-none focus:outline-none border-0 focus:ring-0 active:outline-none"
+      onClick={(e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        toggleTheme()
+      }}
+      className="relative w-16 h-8 rounded-full overflow-hidden cursor-pointer transition-all duration-300 outline-none focus:outline-none border-0 focus:ring-0 active:outline-none z-10"
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       title={isDark ? 'Chuyển sang chế độ sáng' : 'Chuyển sang chế độ tối'}
+      type="button"
     >
       {/* Background with day/night scenes - full width */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         {/* Light Mood Scene - Full */}
-        <div className={`absolute inset-0 transition-opacity duration-300 ${isDark ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`absolute inset-0 transition-opacity duration-300 pointer-events-none ${isDark ? 'opacity-0' : 'opacity-100'}`}>
           <svg viewBox="0 0 100 50" className="w-full h-full">
             {/* Sky */}
             <rect x="0" y="0" width="100" height="30" fill="#87CEEB" />
@@ -30,7 +35,7 @@ export default function ThemeToggle() {
         </div>
         
         {/* Dark Mood Scene - Full */}
-        <div className={`absolute inset-0 transition-opacity duration-300 ${isDark ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`absolute inset-0 transition-opacity duration-300 pointer-events-none ${isDark ? 'opacity-100' : 'opacity-0'}`}>
           <svg viewBox="0 0 100 50" className="w-full h-full">
             {/* Sky */}
             <rect x="0" y="0" width="100" height="30" fill="#1a1a2e" />
@@ -55,7 +60,7 @@ export default function ThemeToggle() {
       
       {/* Handle */}
       <div
-        className={`absolute top-0.5 bottom-0.5 w-6 h-6 rounded-full bg-white shadow-md transition-transform duration-300 ease-in-out ${
+        className={`absolute top-0.5 bottom-0.5 w-6 h-6 rounded-full bg-white shadow-md transition-transform duration-300 ease-in-out pointer-events-none ${
           isDark ? 'translate-x-[2.5rem]' : 'translate-x-0'
         }`}
       />

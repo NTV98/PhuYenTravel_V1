@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
 }
 
 html, body, #root {
@@ -16,6 +16,13 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Mobile-first improvements */
+@media (max-width: 768px) {
+  body {
+    @apply bg-white dark:bg-slate-900;
+  }
 }
 
 .container-responsive {
@@ -31,14 +38,14 @@ html {
 }
 
 .nav-underline {
-  @apply relative inline-flex items-center px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-ocean-600 transition;
+  @apply relative inline-flex items-center px-3 py-2 transition;
 }
 .nav-underline:after {
   content: "";
-  @apply absolute left-3 right-3 -bottom-0.5 h-0.5 bg-ocean-500 rounded origin-left scale-x-0 transition-transform;
+  @apply absolute left-3 right-3 -bottom-0.5 h-0.5 bg-accent-yellow rounded origin-left scale-x-0 transition-transform;
 }
 .nav-underline-active {
-  @apply text-ocean-600;
+  @apply text-accent-yellow;
 }
 .nav-underline-active:after, .nav-underline:hover:after {
   transform: scaleX(1);
