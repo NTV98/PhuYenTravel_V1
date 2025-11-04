@@ -5,7 +5,7 @@ export default function Tips() {
   return (
     <div className="container-responsive py-12">
       <h1 className="section-title">Kinh nghiệm du lịch</h1>
-      <p className="mt-2 text-slate-600 max-w-2xl">
+      <p className="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">
         Những mẹo hữu ích: đi mùa nào đẹp, lịch trình 2-3-4 ngày, chuẩn bị đồ đạc, ẩm thực nên thử,
         lưu ý an toàn, văn hóa địa phương và cách tiết kiệm chi phí.
       </p>

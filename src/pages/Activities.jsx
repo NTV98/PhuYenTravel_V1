@@ -5,7 +5,7 @@ export default function Activities() {
   return (
     <div className="container-responsive py-12">
       <h1 className="section-title">Hoạt động vui chơi hấp dẫn</h1>
-      <p className="mt-2 text-slate-600 max-w-2xl">
+      <p className="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">
         Gợi ý các trải nghiệm và hoạt động thú vị tại Phú Yên: lặn ngắm san hô, trekking, chèo SUP,
         tour ngắm bình minh/hoàng hôn, trải nghiệm làng nghề, và nhiều hơn nữa.
       </p>

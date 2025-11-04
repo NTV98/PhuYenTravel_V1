@@ -5,7 +5,7 @@ export default function Transport() {
   return (
     <div className="container-responsive py-12">
       <h1 className="section-title">Phương tiện di chuyển</h1>
-      <p className="mt-2 text-slate-600 max-w-2xl">
+      <p className="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">
         Hướng dẫn di chuyển đến/đi trong Phú Yên: máy bay, tàu hỏa, xe khách, thuê xe máy/ô tô,
         gọi taxi/xe công nghệ, lịch trình gợi ý và chi phí tham khảo.
       </p>

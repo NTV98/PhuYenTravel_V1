@@ -21,8 +21,8 @@ export default function MapPage() {
         <ul className="mt-4 space-y-3">
           {mapMarkers.map((m, idx) => (
             <li key={idx} className="p-3 rounded-lg border hover:border-ocean-300 transition">
-              <div className="font-medium text-slate-800">{m.name}</div>
-              <div className="text-xs text-slate-500">Lat: {m.lat}, Lng: {m.lng}</div>
+              <div className="font-medium text-slate-800 dark:text-slate-200">{m.name}</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400">Lat: {m.lat}, Lng: {m.lng}</div>
             </li>
           ))}
         </ul>

@@ -5,11 +5,11 @@ export default function Contact() {
     <div className="container-responsive py-12 grid lg:grid-cols-2 gap-10">
       <div>
         <h1 className="section-title">Liên hệ</h1>
-        <p className="mt-2 text-slate-600">Gửi câu hỏi hoặc yêu cầu hỗ trợ, chúng tôi sẽ phản hồi sớm.</p>
+        <p className="mt-2 text-slate-600 dark:text-slate-300">Gửi câu hỏi hoặc yêu cầu hỗ trợ, chúng tôi sẽ phản hồi sớm.</p>
         <div className="mt-6"><ContactForm /></div>
       </div>
       <div>
-        <h2 className="text-xl font-semibold text-ocean-700">Bản đồ</h2>
+        <h2 className="text-xl font-semibold text-ocean-700 dark:text-ocean-400">Bản đồ</h2>
         <div className="mt-3 rounded-xl overflow-hidden shadow-soft">
           <iframe
             title="Google Map Phú Yên"
@@ -22,7 +22,7 @@ export default function Contact() {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
-        <div className="mt-6 text-slate-700 space-y-2">
+        <div className="mt-6 text-slate-700 dark:text-slate-300 space-y-2">
           <p><strong>Địa chỉ:</strong> Tuy Hòa, Phú Yên</p>
           <p><strong>Email:</strong> contact@phuyentravel.vn</p>
           <p><strong>Điện thoại:</strong> 0123 456 789</p>

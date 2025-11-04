@@ -5,7 +5,7 @@ export default function Weather() {
   return (
     <div className="container-responsive py-12">
       <h1 className="section-title">Thông tin thời tiết</h1>
-      <p className="mt-2 text-slate-600 max-w-2xl">
+      <p className="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">
         Tóm tắt thời tiết theo mùa tại Phú Yên, gợi ý thời điểm lý tưởng để đi biển, leo núi,
         và các lưu ý khi có mưa bão. Sắp có bảng dự báo ngắn hạn.
       </p>

@@ -41,9 +41,9 @@ export default function Detail() {
   if (!item) {
     return (
       <div className="container-responsive py-16">
-        <button onClick={() => navigate(-1)} className="text-ocean-600 hover:underline">Quay lại</button>
-        <h1 className="mt-6 text-2xl font-semibold text-slate-800">Không tìm thấy nội dung</h1>
-        <p className="mt-2 text-slate-600">Vui lòng thử lại sau.</p>
+        <button onClick={() => navigate(-1)} className="text-ocean-600 dark:text-ocean-400 hover:underline">Quay lại</button>
+        <h1 className="mt-6 text-2xl font-semibold text-slate-800 dark:text-slate-200">Không tìm thấy nội dung</h1>
+        <p className="mt-2 text-slate-600 dark:text-slate-300">Vui lòng thử lại sau.</p>
       </div>
     )
   }
@@ -88,8 +88,8 @@ export default function Detail() {
       {/* Nội dung chi tiết */}
       <section className="container-responsive py-10 grid lg:grid-cols-[1fr_340px] gap-10">
         <article className="prose prose-slate max-w-none">
-          <h2 className="text-xl font-semibold text-slate-800">Giới thiệu</h2>
-          <p className="text-slate-700">{item.longDescription || item.description || 'Đang cập nhật nội dung chi tiết.'}</p>
+          <h2 className="text-xl font-semibold text-slate-800 dark:text-slate-200">Giới thiệu</h2>
+          <p className="text-slate-700 dark:text-slate-300">{item.longDescription || item.description || 'Đang cập nhật nội dung chi tiết.'}</p>
 
           {Array.isArray(item.gallery) && item.gallery.length > 0 && (
             <div className="mt-6 grid sm:grid-cols-2 gap-4">
@@ -104,16 +104,16 @@ export default function Detail() {
           {(item.review || (Array.isArray(item.tips) && item.tips.length > 0)) && (
             <div className="mt-8 not-prose">
               {item.review && (
-                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                  <h3 className="text-base font-semibold text-slate-800">Trải nghiệm thực tế</h3>
-                  <p className="mt-1 text-slate-700">{item.review}</p>
+                <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <h3 className="text-base font-semibold text-slate-800 dark:text-slate-200">Trải nghiệm thực tế</h3>
+                  <p className="mt-1 text-slate-700 dark:text-slate-300">{item.review}</p>
                 </div>
               )}
 
               {Array.isArray(item.tips) && item.tips.length > 0 && (
-                <div className="mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200">
-                  <h3 className="text-base font-semibold text-emerald-900">Lưu ý khi đi</h3>
-                  <ul className="mt-2 list-disc list-inside text-emerald-900/90">
+                <div className="mt-4 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800">
+                  <h3 className="text-base font-semibold text-emerald-900 dark:text-emerald-300">Lưu ý khi đi</h3>
+                  <ul className="mt-2 list-disc list-inside text-emerald-900/90 dark:text-emerald-200">
                     {item.tips.map((tip, idx) => (
                       <li key={idx}>{tip}</li>
                     ))}
@@ -125,9 +125,9 @@ export default function Detail() {
         </article>
 
         <aside>
-          <div className="p-5 rounded-xl border bg-white shadow-soft">
-            <h3 className="font-semibold text-slate-800">Thông tin nhanh</h3>
-            <ul className="mt-3 space-y-2 text-slate-600 text-sm">
+          <div className="p-5 rounded-xl border bg-white dark:bg-slate-800 dark:border-slate-700 shadow-soft">
+            <h3 className="font-semibold text-slate-800 dark:text-slate-200">Thông tin nhanh</h3>
+            <ul className="mt-3 space-y-2 text-slate-600 dark:text-slate-300 text-sm">
               <li>Danh mục: {title}</li>
               {(typeof item.rating === 'number' || typeof item.votes === 'number') && (
                 <li className="flex items-center gap-2">
@@ -140,15 +140,15 @@ export default function Detail() {
                       )
                     ))}
                   </span>
-                  <span>{(item.rating || 0).toFixed(1)}</span>
-                  {typeof item.votes === 'number' && <span className="text-slate-500">({item.votes.toLocaleString()} lượt)</span>}
+                  <span className="dark:text-slate-200">{(item.rating || 0).toFixed(1)}</span>
+                  {typeof item.votes === 'number' && <span className="text-slate-500 dark:text-slate-400">({item.votes.toLocaleString()} lượt)</span>}
                 </li>
               )}
               {Array.isArray(item.info) && item.info.map((it, idx) => (
-                <li key={idx}><strong>{it.label}:</strong> {it.value}</li>
+                <li key={idx}><strong className="dark:text-slate-200">{it.label}:</strong> <span className="dark:text-slate-300">{it.value}</span></li>
               ))}
               {item.link && (
-                <li className="truncate">Tham khảo: <a className="text-ocean-600 hover:underline" href={item.link} target="_blank" rel="noreferrer">{item.link}</a></li>
+                <li className="truncate">Tham khảo: <a className="text-ocean-600 dark:text-ocean-400 hover:underline" href={item.link} target="_blank" rel="noreferrer">{item.link}</a></li>
               )}
             </ul>
             <button onClick={() => navigate(-1)} className="btn-primary mt-4 w-full justify-center">Quay lại</button>

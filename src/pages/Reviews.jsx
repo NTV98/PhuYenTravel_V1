@@ -5,7 +5,7 @@ export default function Reviews() {
   return (
     <div className="container-responsive py-12">
       <h1 className="section-title">Review du lịch</h1>
-      <p className="mt-2 text-slate-600 max-w-2xl">
+      <p className="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">
         Tổng hợp các bài review hay từ cộng đồng: lịch trình mẫu, chi phí thực tế, lưu ý từng điểm đến,
         tips chụp ảnh đẹp và trải nghiệm "best of Phú Yên".
       </p>

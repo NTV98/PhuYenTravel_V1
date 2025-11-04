@@ -51,7 +51,7 @@ export default function Header() {
           <ThemeToggle />
           {/* <LanguageToggle /> */}
         </div>
-        <button className="md:hidden p-2" onClick={() => setOpen(true)} aria-label="Open menu">
+        <button className="md:hidden p-2 text-slate-700 dark:text-slate-200" onClick={() => setOpen(true)} aria-label="Open menu">
           <FaBars className="h-6 w-6" />
         </button>
       </div>
@@ -59,21 +59,21 @@ export default function Header() {
       {open && createPortal(
         <div className="md:hidden fixed inset-0 z-[9999]">
           <div className="absolute inset-0 bg-slate-900/60" onClick={() => setOpen(false)} />
-          <div className="fixed inset-0 bg-white flex flex-col">
-            <div className="flex items-center justify-between h-14 px-4 border-b shadow-sm">
-              <span className="text-ocean-600 font-semibold text-lg">Menu</span>
-              <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2">
+          <div className="fixed inset-0 bg-white dark:bg-slate-800 flex flex-col">
+            <div className="flex items-center justify-between h-14 px-4 border-b dark:border-slate-700 shadow-sm">
+              <span className="text-ocean-600 dark:text-ocean-400 font-semibold text-lg">Menu</span>
+              <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2 text-slate-700 dark:text-slate-200">
                 <FaTimes className="h-6 w-6" />
               </button>
             </div>
             <nav className="px-2 py-3 overflow-y-auto flex-1">
-              <div className="flex flex-col divide-y divide-slate-100" onClick={() => setOpen(false)}>
-                <NavLink to="/" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 font-semibold' : 'text-slate-700 hover:text-ocean-600'}`}>Trang chủ</NavLink>
-                <NavLink to="/about" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 font-semibold' : 'text-slate-700 hover:text-ocean-600'}`}>Giới thiệu</NavLink>
-                <NavLink to="/destinations" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 font-semibold' : 'text-slate-700 hover:text-ocean-600'}`}>Điểm đến</NavLink>
-                <NavLink to="/cuisine" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 font-semibold' : 'text-slate-700 hover:text-ocean-600'}`}>Ẩm thực</NavLink>
-                <NavLink to="/map" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 font-semibold' : 'text-slate-700 hover:text-ocean-600'}`}>Bản đồ</NavLink>
-                <NavLink to="/contact" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 font-semibold' : 'text-slate-700 hover:text-ocean-600'}`}>Liên hệ</NavLink>
+              <div className="flex flex-col divide-y divide-slate-100 dark:divide-slate-700" onClick={() => setOpen(false)}>
+                <NavLink to="/" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 dark:text-ocean-400 font-semibold' : 'text-slate-700 dark:text-slate-200 hover:text-ocean-600'}`}>Trang chủ</NavLink>
+                <NavLink to="/about" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 dark:text-ocean-400 font-semibold' : 'text-slate-700 dark:text-slate-200 hover:text-ocean-600'}`}>Giới thiệu</NavLink>
+                <NavLink to="/destinations" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 dark:text-ocean-400 font-semibold' : 'text-slate-700 dark:text-slate-200 hover:text-ocean-600'}`}>Điểm đến</NavLink>
+                <NavLink to="/cuisine" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 dark:text-ocean-400 font-semibold' : 'text-slate-700 dark:text-slate-200 hover:text-ocean-600'}`}>Ẩm thực</NavLink>
+                <NavLink to="/map" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 dark:text-ocean-400 font-semibold' : 'text-slate-700 dark:text-slate-200 hover:text-ocean-600'}`}>Bản đồ</NavLink>
+                <NavLink to="/contact" className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-ocean-700 dark:text-ocean-400 font-semibold' : 'text-slate-700 dark:text-slate-200 hover:text-ocean-600'}`}>Liên hệ</NavLink>
               </div>
             </nav>
           </div>

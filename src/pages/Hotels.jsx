@@ -5,7 +5,7 @@ export default function Hotels() {
   return (
     <div className="container-responsive py-12">
       <h1 className="section-title">Khách sạn</h1>
-      <p className="mt-2 text-slate-600 max-w-2xl">
+      <p className="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">
         Danh sách khách sạn, resort, homestay theo khu vực và nhu cầu. Đi kèm gợi ý đặt phòng theo mùa,
         bí quyết săn giá tốt, và tiện nghi phù hợp gia đình/cặp đôi.
       </p>

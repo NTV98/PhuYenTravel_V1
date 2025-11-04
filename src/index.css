@@ -27,11 +27,11 @@ html {
 }
 
 .section-title {
-  @apply text-2xl sm:text-3xl font-semibold text-ocean-800;
+  @apply text-2xl sm:text-3xl font-semibold text-ocean-800 dark:text-ocean-400;
 }
 
 .nav-underline {
-  @apply relative inline-flex items-center px-3 py-2 text-slate-700 hover:text-ocean-600 transition;
+  @apply relative inline-flex items-center px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-ocean-600 transition;
 }
 .nav-underline:after {
   content: "";
