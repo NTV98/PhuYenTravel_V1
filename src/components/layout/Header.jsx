@@ -2,6 +2,8 @@ import { Link, NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import ThemeToggle from '../ThemeToggle'
+import LanguageToggle from '../LanguageToggle'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -35,14 +37,20 @@ export default function Header() {
   )
 
   return (
-    <header className={`bg-white/70 backdrop-blur sticky top-0 z-50 border-b transition-shadow ${scrolled ? 'shadow-lg' : ''}`}>
+    <header className={`relative bg-white/70 dark:bg-slate-900/70 backdrop-blur sticky top-0 z-50 border-b border-slate-200 dark:border-slate-700 transition-shadow ${scrolled ? 'shadow-lg' : ''}`}>
       <div className="container-responsive flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2">
           <span className="text-ocean-600 font-semibold text-xl">Phú Yên Travel</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-2">
+        <nav className="hidden md:flex items-center gap-2 flex-1 justify-center">
           {DesktopNav}
         </nav>
+      </div>
+      <div className="absolute right-0 top-0 h-16 flex items-center gap-2 pr-4">
+        <div className="hidden md:flex items-center gap-2">
+          <ThemeToggle />
+          {/* <LanguageToggle /> */}
+        </div>
         <button className="md:hidden p-2" onClick={() => setOpen(true)} aria-label="Open menu">
           <FaBars className="h-6 w-6" />
         </button>
