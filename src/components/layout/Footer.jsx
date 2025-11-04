@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-slate-50 dark:bg-slate-800 border-t dark:border-slate-700 mt-[100px]">
       <div className="container-responsive py-10 grid md:grid-cols-3 gap-8">
         <div>
-          <h4 className="text-lg font-semibold text-ocean-700 dark:text-ocean-400">Phú Yên Travel</h4>
+          <h4 className="text-lg font-semibold text-ocean-700 dark:text-ocean-400">Nhớ Phú Yên</h4>
           <p className="mt-2 text-slate-600 dark:text-slate-300">Khám phá vẻ đẹp xứ hoa vàng cỏ xanh.</p>
           <div className="flex gap-3 mt-4 text-ocean-600 dark:text-ocean-400">
             <a href="#" aria-label="Facebook"><FaFacebook className="h-5 w-5" /></a>
@@ -40,7 +40,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t dark:border-slate-700 py-4 text-center text-slate-500 dark:text-slate-400 text-sm">© {new Date().getFullYear()} Phú Yên Travel. All rights reserved.</div>
+      <div className="border-t dark:border-slate-700 py-4 text-center text-slate-500 dark:text-slate-400 text-sm">© {new Date().getFullYear()} Nhớ Phú Yên. All rights reserved.</div>
     </footer>
   )
 }

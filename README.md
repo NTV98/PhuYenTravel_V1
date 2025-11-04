@@ -1,4 +1,4 @@
-# Phú Yên Travel (React + Vite + Tailwind)
+# Nhớ Phú Yên (React + Vite + Tailwind)
 
 Một website giới thiệu du lịch Phú Yên được xây dựng bằng React, Vite và TailwindCSS.
 

@@ -33,7 +33,7 @@ export default function Header() {
       <header className={`hidden md:block relative bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 transition-shadow ${scrolled ? 'shadow-lg' : ''}`}>
         <div className="container-responsive flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-slate-800 dark:text-white font-bold text-lg md:text-xl">Phú Yên Travel</span>
+            <span className="text-slate-800 dark:text-white font-bold text-lg md:text-xl">Nhớ Phú Yên</span>
           </Link>
           <nav className="flex items-center gap-2 flex-1 justify-center">
             <NavLink to="/" className={({ isActive }) => `nav-underline ${isActive ? 'nav-underline-active' : ''} text-slate-700 dark:text-white hover:text-accent-yellow`}>Trang chủ</NavLink>
