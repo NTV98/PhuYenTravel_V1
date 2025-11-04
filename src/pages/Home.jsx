@@ -109,9 +109,9 @@ export default function Home() {
         <p className="mt-3 text-slate-600 max-w-3xl">Tóm tắt thời tiết theo mùa và dự báo ngắn hạn.</p>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {weatherSummaries.slice(0,6).map((it, i) => (
-           <Link key={i} to={`/activities/${it.slug}`} className="block card hover:shadow-lg transition-shadow">
+           <Link key={i} to={`/activities/${it.slug}`} className="block group card hover:shadow-lg transition-shadow">
            <div className="aspect-[16/9] sm:aspect-[4/3] overflow-hidden rounded-lg">
-             <img src={it.image} alt={it.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition" />
+             <img src={it.image} alt={it.name} loading="lazy" className="w-full h-full object-cover img-scale-hover" />
            </div>
            <div className="mt-3">
              <h3 className="font-semibold text-slate-800">{it.name}</h3>

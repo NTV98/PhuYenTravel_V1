@@ -4,6 +4,10 @@ import { useEffect, useState } from 'react'
 export default function HeroSection() {
   const [offsetY, setOffsetY] = useState(0)
   useEffect(() => {
+    // Disable parallax on mobile to prevent flickering
+    const isMobile = window.innerWidth < 768
+    if (isMobile) return
+    
     const onScroll = () => setOffsetY(window.scrollY * 0.2)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -21,25 +25,28 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-10 flex items-center">
         <div className="container-responsive text-white">
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
             className="text-3xl sm:text-5xl font-bold"
           >
             Khám phá Phú Yên
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: 0.05 }}
             className="mt-3 max-w-2xl text-white/90"
           >
             Xứ hoa vàng cỏ xanh với biển xanh, cát trắng, nắng vàng và con người thân thiện.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: 0.1 }}
             className="mt-6"
           >
             <a href="#highlights" className="btn-primary">Khám phá ngay</a>
