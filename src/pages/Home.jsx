@@ -37,7 +37,7 @@ export default function Home() {
         </div>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {cuisines.slice(0,6).map((item, idx) => (
-            <DestinationCard key={idx} item={item} />
+            <DestinationCard key={idx} item={item} type="cuisine" />
           ))}
         </div>
       </section>
@@ -49,7 +49,7 @@ export default function Home() {
         <p className="mt-3 text-slate-600 max-w-3xl">Gợi ý trải nghiệm tiêu biểu: lặn ngắm san hô, trekking, chèo SUP…</p>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {activities.slice(0,6).map((it, i) => (
-            <DestinationCard key={i} item={it} />
+            <DestinationCard key={i} item={it} type="activities" />
           ))}
         </div>
       </section>
@@ -61,7 +61,7 @@ export default function Home() {
         <p className="mt-3 text-slate-600 max-w-3xl">Cách đến Phú Yên và đi lại thuận tiện, tiết kiệm.</p>
         <div className="mt-6 grid sm:grid-cols-3 gap-5 sm:gap-6">
           {transports.slice(0,4).map((it, i) => (
-           <DestinationCard key={i} item={it} />
+           <DestinationCard key={i} item={it} type="transport" />
           ))}
         </div>
       </section>
@@ -73,7 +73,7 @@ export default function Home() {
         <p className="mt-3 text-slate-600 max-w-3xl">Gợi ý nơi lưu trú theo ngân sách và vị trí.</p>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {hotels.slice(0,6).map((it, i) => (
-            <DestinationCard key={i} item={it} />
+            <DestinationCard key={i} item={it} type="hotels" />
           ))}
         </div>
       </section>
@@ -85,7 +85,7 @@ export default function Home() {
         <p className="mt-3 text-slate-600 max-w-3xl">Lịch trình, mẹo hay và lưu ý quan trọng.</p>
         <div className="mt-6 grid sm:grid-cols-3 gap-5 sm:gap-6">
           {tipsArticles.slice(0,4).map((it, i) => (
-           <DestinationCard key={i} item={it} />
+           <DestinationCard key={i} item={it} type="tips" />
           ))}
         </div>
       </section>
@@ -97,7 +97,7 @@ export default function Home() {
         <p className="mt-3 text-slate-600 max-w-3xl">Tổng hợp các bài review chất lượng.</p>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {reviewPosts.slice(0,6).map((it, i) => (
-           <DestinationCard key={i} item={it} />
+           <DestinationCard key={i} item={it} type="reviews" />
           ))}
         </div>
       </section>
@@ -109,15 +109,7 @@ export default function Home() {
         <p className="mt-3 text-slate-600 max-w-3xl">Tóm tắt thời tiết theo mùa và dự báo ngắn hạn.</p>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {weatherSummaries.slice(0,6).map((it, i) => (
-           <Link key={i} to={`/activities/${it.slug}`} className="block group card hover:shadow-lg transition-shadow">
-           <div className="aspect-[16/9] sm:aspect-[4/3] overflow-hidden rounded-lg">
-             <img src={it.image} alt={it.name} loading="lazy" className="w-full h-full object-cover img-scale-hover" />
-           </div>
-           <div className="mt-3">
-             <h3 className="font-semibold text-slate-800">{it.name}</h3>
-             <p className="text-sm text-slate-600">{it.description}</p>
-           </div>
-         </Link>
+           <DestinationCard key={i} item={it} type="weather" />
           ))}
         </div>
       </section>
