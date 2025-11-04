@@ -64,54 +64,54 @@ export default function Header() {
       {open && !openSettings && createPortal(
         <div className="md:hidden fixed inset-0 z-[9999]">
           <div className="absolute inset-0 bg-black/60" onClick={() => setOpen(false)} />
-          <div className="fixed inset-0 bg-slate-900 flex flex-col">
-            <div className="flex items-center justify-between h-14 px-4 border-b border-slate-800">
-              <span className="text-accent-yellow font-bold text-lg">Menu</span>
-              <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2 text-white hover:bg-slate-800 rounded-lg transition-colors">
+          <div className="fixed inset-0 bg-white dark:bg-slate-900 flex flex-col">
+            <div className="flex items-center justify-between h-14 px-4 border-b border-slate-200 dark:border-slate-800">
+              {/* <span className="text-accent-yellow font-bold text-lg">Menu</span> */}
+              <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2 text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
                 <FaTimes className="h-6 w-6" />
               </button>
             </div>
             <nav className="px-2 py-3 overflow-y-auto flex-1">
-              <div className="flex flex-col divide-y divide-slate-800">
+              <div className="flex flex-col divide-y divide-slate-200 dark:divide-slate-800">
                 <NavLink 
                   to="/" 
                   onClick={() => setOpen(false)}
-                  className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-accent-yellow font-semibold' : 'text-white hover:text-accent-yellow'}`}
+                  className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-accent-yellow font-semibold' : 'text-slate-700 dark:text-white hover:text-accent-yellow'}`}
                 >
                   Trang chủ
                 </NavLink>
                 <NavLink 
                   to="/about" 
                   onClick={() => setOpen(false)}
-                  className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-accent-yellow font-semibold' : 'text-white hover:text-accent-yellow'}`}
+                  className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-accent-yellow font-semibold' : 'text-slate-700 dark:text-white hover:text-accent-yellow'}`}
                 >
                   Giới thiệu
                 </NavLink>
                 <NavLink 
                   to="/destinations" 
                   onClick={() => setOpen(false)}
-                  className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-accent-yellow font-semibold' : 'text-white hover:text-accent-yellow'}`}
+                  className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-accent-yellow font-semibold' : 'text-slate-700 dark:text-white hover:text-accent-yellow'}`}
                 >
                   Điểm đến
                 </NavLink>
                 <NavLink 
                   to="/cuisine" 
                   onClick={() => setOpen(false)}
-                  className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-accent-yellow font-semibold' : 'text-white hover:text-accent-yellow'}`}
+                  className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-accent-yellow font-semibold' : 'text-slate-700 dark:text-white hover:text-accent-yellow'}`}
                 >
                   Ẩm thực
                 </NavLink>
                 <NavLink 
                   to="/map" 
                   onClick={() => setOpen(false)}
-                  className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-accent-yellow font-semibold' : 'text-white hover:text-accent-yellow'}`}
+                  className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-accent-yellow font-semibold' : 'text-slate-700 dark:text-white hover:text-accent-yellow'}`}
                 >
                   Bản đồ
                 </NavLink>
                 <NavLink 
                   to="/contact" 
                   onClick={() => setOpen(false)}
-                  className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-accent-yellow font-semibold' : 'text-white hover:text-accent-yellow'}`}
+                  className={({ isActive }) => `px-4 py-4 text-lg ${isActive ? 'text-accent-yellow font-semibold' : 'text-slate-700 dark:text-white hover:text-accent-yellow'}`}
                 >
                   Liên hệ
                 </NavLink>
@@ -119,7 +119,7 @@ export default function Header() {
                   onClick={() => {
                     setOpenSettings(true)
                   }}
-                  className="px-4 py-4 text-lg text-white hover:text-accent-yellow flex items-center gap-3 w-full text-left"
+                  className="px-4 py-4 text-lg text-slate-700 dark:text-white hover:text-accent-yellow flex items-center gap-3 w-full text-left"
                 >
                   <FaCog className="w-5 h-5" />
                   <span>Cài đặt</span>
@@ -135,11 +135,11 @@ export default function Header() {
       {openSettings && createPortal(
         <div className="md:hidden fixed inset-0 z-[9999]">
           <div className="absolute inset-0 bg-black/60" onClick={() => setOpenSettings(false)} />
-          <div className="fixed inset-0 bg-slate-900 flex flex-col">
-            <div className="flex items-center justify-between h-14 px-4 border-b border-slate-800">
+          <div className="fixed inset-0 bg-white dark:bg-slate-900 flex flex-col">
+            <div className="flex items-center justify-between h-14 px-4 border-b border-slate-200 dark:border-slate-800">
               <button 
                 onClick={() => setOpenSettings(false)} 
-                className="p-2 -ml-2 text-white hover:bg-slate-800 rounded-lg transition-colors"
+                className="p-2 -ml-2 text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
                 aria-label="Back to menu"
               >
                 <FaArrowLeft className="h-5 w-5" />
@@ -151,7 +151,7 @@ export default function Header() {
                   setOpen(false)
                 }} 
                 aria-label="Close settings" 
-                className="p-2 -mr-2 text-white hover:bg-slate-800 rounded-lg transition-colors"
+                className="p-2 -mr-2 text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
               >
                 <FaTimes className="h-6 w-6" />
               </button>
@@ -159,32 +159,32 @@ export default function Header() {
             <div className="px-4 py-6 overflow-y-auto flex-1">
               <div className="space-y-6">
                 {/* Theme Setting */}
-                <div className="bg-slate-800 border border-slate-700 rounded-xl p-4">
-                  <h3 className="text-white font-semibold text-base mb-4">Giao diện</h3>
+                <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4">
+                  <h3 className="text-slate-800 dark:text-white font-semibold text-base mb-4">Giao diện</h3>
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-300 text-sm">Chế độ sáng/tối</span>
+                    <span className="text-slate-600 dark:text-slate-300 text-sm">Chế độ sáng/tối</span>
                     <ThemeToggle />
                   </div>
                 </div>
 
                 {/* Language Setting */}
-                <div className="bg-slate-800 border border-slate-700 rounded-xl p-4">
-                  <h3 className="text-white font-semibold text-base mb-4">Ngôn ngữ</h3>
+                <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4">
+                  <h3 className="text-slate-800 dark:text-white font-semibold text-base mb-4">Ngôn ngữ</h3>
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-300 text-sm">Tiếng Việt / English</span>
+                    <span className="text-slate-600 dark:text-slate-300 text-sm">Tiếng Việt / English</span>
                     <LanguageToggle />
                   </div>
                 </div>
 
                 {/* Placeholder for future settings */}
-                <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4">
-                  <h3 className="text-white font-semibold text-base mb-2">Thông báo</h3>
-                  <p className="text-slate-400 text-xs">Tính năng đang được phát triển</p>
+                <div className="bg-white/50 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/50 rounded-xl p-4">
+                  <h3 className="text-slate-800 dark:text-white font-semibold text-base mb-2">Thông báo</h3>
+                  <p className="text-slate-500 dark:text-slate-400 text-xs">Tính năng đang được phát triển</p>
                 </div>
 
-                <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4">
-                  <h3 className="text-white font-semibold text-base mb-2">Bảo mật</h3>
-                  <p className="text-slate-400 text-xs">Tính năng đang được phát triển</p>
+                <div className="bg-white/50 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/50 rounded-xl p-4">
+                  <h3 className="text-slate-800 dark:text-white font-semibold text-base mb-2">Bảo mật</h3>
+                  <p className="text-slate-500 dark:text-slate-400 text-xs">Tính năng đang được phát triển</p>
                 </div>
               </div>
             </div>
